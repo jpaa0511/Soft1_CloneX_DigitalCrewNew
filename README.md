@@ -25,3 +25,16 @@ Además, el proyecto cuenta con un backend también en JavaScript, con el propó
 1. Clona el repositorio del proyecto:
    ```bash
    git clone https://github.com/jpaa0511/Soft1_CloneX_DigitalCrew.git
+2. Etc...
+
+## Requerimientos
+• Lenguaje: JavaScript (ES6+)
+• Frameworks:
+   • Frontend: React.js
+   • Backend: Node.js
+• Librerías:
+   • Frontend: React Router, 
+   • Backend: 
+• Base de datos: Firebase
+• Otros:
+## Licencia
