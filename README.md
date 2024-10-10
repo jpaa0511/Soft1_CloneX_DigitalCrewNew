@@ -1,40 +1,8 @@
-# Nombre de la Materia
-Electiva Software 1
+# React + Vite
 
-# Nombre Completo del Proyecto
-Clone de X(Twitter)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-# Nombre del Equipo
-Digital Crew
+Currently, two official plugins are available:
 
-## Integrantes del Equipo
-• Juan Pablo Agudelo Arango.  
-• Juan Carlos Alvarez Velarde.  
-• Jaiber Emilio Higuita Gomez.  
-
-## Descripción del Proyecto
-Proyecto: Clone de X(Twitter)  
-
-Este proyecto es un ejercicio académico desarrollado para la materia Electiva 1 (Software), enfocado en la programación reactiva utilizando React con JavaScript. El objetivo principal es aplicar y consolidar los conceptos aprendidos sobre desarrollo de interfaces dinámicas e interactivas en frontend, aprovechando el potencial de React para gestionar estados y componentes. La intención es replicar la interfaz de usuario de X(Twitter) y recrear algunas de sus funciones principales.  
-
-Además, el proyecto cuenta con un backend también en JavaScript, con el propósito de practicar el manejo del ciclo completo de desarrollo, integrando tanto el frontend como el backend. Este proyecto busca reforzar las habilidades adquiridas en el manejo de tecnologías web modernas, promoviendo una comprensión integral del desarrollo full-stack.
-
-## Instrucciones de Compilación y Ejecución
-
-### Clonar el repositorio:
-1. Clona el repositorio del proyecto:
-   ```bash
-   git clone https://github.com/jpaa0511/Soft1_CloneX_DigitalCrew.git
-2. Etc...
-
-## Requerimientos
-• Lenguaje: JavaScript (ES6+)
-• Frameworks:
-   • Frontend: React.js
-   • Backend: Node.js
-• Librerías:
-   • Frontend: React Router, 
-   • Backend: 
-• Base de datos: Firebase
-• Otros:
-## Licencia
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
