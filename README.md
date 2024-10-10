@@ -1,10 +1,10 @@
-# Nombre de la Materia
+## Nombre de la Materia
 Electiva Software 1
 
-# Nombre Completo del Proyecto
+## Nombre Completo del Proyecto
 Clone de X(Twitter)
 
-# Nombre del Equipo
+## Nombre del Equipo
 Digital Crew
 
 ## Integrantes del Equipo
