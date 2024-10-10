@@ -22,7 +22,7 @@ Además, el proyecto cuenta con un backend también en JavaScript, con el propó
 ## Instrucciones de Compilación y Ejecución
 
 ### Clonar el repositorio:
-1. Clona el repositorio del proyecto:
+1. Clona el repositorio del proyecto, puedes usar git bash:
    ```bash
    git clone https://github.com/jpaa0511/Soft1_CloneX_DigitalCrew.git
 2. Navega dentro del repositorio:
@@ -40,13 +40,13 @@ Además, el proyecto cuenta con un backend también en JavaScript, con el propó
 6. Ingresa por el puerto que indica la consola.
 
 ## Requerimientos
-• Lenguaje: JavaScript (ES6+)
-• Frameworks:
-   • Frontend: React.js
-   • Backend: Node.js
-• Librerías:
-   • Frontend: React Router, 
-   • Backend: 
-• Base de datos: Firebase
-• Otros:
+• Lenguaje: JavaScript (ES6+)  
+• Frameworks:  
+   • Frontend: React.js  
+   • Backend: Node.js  
+• Librerías:  
+   • Frontend: React Router,  
+   • Backend:  
+• Base de datos: Firebase  
+• Otros:  
 ## Licencia
