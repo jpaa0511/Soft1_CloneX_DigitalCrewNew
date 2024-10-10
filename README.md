@@ -25,7 +25,19 @@ Además, el proyecto cuenta con un backend también en JavaScript, con el propó
 1. Clona el repositorio del proyecto:
    ```bash
    git clone https://github.com/jpaa0511/Soft1_CloneX_DigitalCrew.git
-2. Etc...
+2. Navega dentro del repositorio:
+   ```bash
+   cd Soft1_CloneX_DigitalCrew
+3. Cambia a la rama de entrega:
+   ```bash
+   git checkout release/v1.0
+4. Instala las dependencias necesarias:
+   ```bash
+   npm install
+5. Ejecuta el proyecto:
+   ```bash
+   npm run dev
+6. Ingresa por el puerto que indica la consola.
 
 ## Requerimientos
 • Lenguaje: JavaScript (ES6+)
