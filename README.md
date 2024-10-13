@@ -44,9 +44,14 @@ Además, el proyecto cuenta con un backend también en JavaScript, con el propó
 • Frameworks:  
    • Frontend: React.js  
    • Backend: Node.js  
+
+• Base de datos: Firebase  
+
+
 • Librerías:  
    • Frontend: React Router,  
    • Backend:  
 • Base de datos: Firebase  
 • Otros:  
+
 ## Licencia
