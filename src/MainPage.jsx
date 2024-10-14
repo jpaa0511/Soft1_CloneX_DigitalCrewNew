@@ -22,7 +22,7 @@ const MainPage = () => {
         <Sidebar />
         <Home />
         <Widgets />
-        <button onClick={handleLogout}>Cerrar sesión</button>
+        <button onClick={handleLogout}>Log out</button>
       </div>
     </>
   );

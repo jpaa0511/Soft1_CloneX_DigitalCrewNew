@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Header } from "./styles";
 import { BoxTwitter } from "./BoxTwitter";
-import { Post } from "./Post";
+import { Posts } from "./Post";
 
 export const Home = () => {
   return (
@@ -11,7 +11,7 @@ export const Home = () => {
       {/* TweetBox */}
       <BoxTwitter />
       {/* Post */}
-      <Post />
+      <Posts />
       {/* Post */}
       {/* Post */}
     </Container>

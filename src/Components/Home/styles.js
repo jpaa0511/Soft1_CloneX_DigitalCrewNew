@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   flex: 0.5;
@@ -47,6 +47,7 @@ export const Avatar = styled.img`
 export const Div = styled.div`
   display: flex;
   width: 100%;
+  position: relative;
   > .columbus {
     display: flex;
     flex-direction: column;
@@ -60,17 +61,22 @@ export const Div = styled.div`
       outline: 0;
       font-size: 19px;
       line-height: 25px;
-      color: #0f1419;
+      color: #ffffff;
+      background-color: transparent;
+      caret-color: #ffffff;
+      &::placeholder {
+        color: #a0a0a0;
+      }
     }
   }
   > input {
-    margin-left: 30px;
-    margin-top: 18px;
-    width: 55%;
+    margin-left: 50px;
+    margin-top: 7px;
+    width: 8%;
     border: none;
     outline: 0;
-    font-size: 19px;
-    line-height: 25px;
+    font-size: 14px;
+    line-height: 21px;
     color: #0f1419;
   }
   > Button {
@@ -86,10 +92,40 @@ export const Div = styled.div`
   }
 `;
 
+export const DivURL = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+
+  > input {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    margin-left: 25px;
+    background-color: transparent;
+    caret-color: #ffffff;
+  }
+
+  > button {
+    background-color: var(--twittercolor);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: #1a91da;
+    }
+  }
+`;
+
 export const DivIcon = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
   > .MuiSvgIcon-root {
     fill: var(--twittercolor);
     margin-left: 1rem;
@@ -119,5 +155,99 @@ export const Button = styled.button`
 
   &:hover {
     background-color: #1a91da;
+  }
+`;
+
+export const File = styled.input.attrs({ type: "file" })`
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  cursor: pointer;
+
+  &.primary {
+    top: 0;
+    left: -51px;
+  }
+
+  &.secondary {
+    top: 25px;
+    left: 16px;
+    width: 30px;
+  }
+
+  &.tertiary {
+    top: 25px;
+    left: 56px;
+    width: 30px;
+  }
+`;
+
+/* ------ Ini Post------- */
+
+export const Post = styled.div`
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+  margin-top: 5px;
+  display: flex;
+  align-items: flex-start;
+  .post-avatar {
+    margin-top: 5px;
+  }
+`;
+export const Images = styled.img`
+  border-radius: 20px;
+  min-width: 100%;
+  width: 100%;
+  min-height: 300px;
+`;
+export const PostBody = styled.div`
+  padding-left: 10px;
+  width: 100%;
+  overflow: hidden;
+  > div span {
+    font-weight: 600;
+    font-size: 15px;
+    color: #5b7083;
+  }
+  post_icon {
+    font-size: 14px !important;
+    color: var(--twitterColor) !important;
+  }
+  h2 {
+    padding: 0;
+    margin: 0;
+  }
+`;
+export const PostDescription = styled.div`
+  margin-bottom: 20px;
+  > p {
+    margin: 0;
+    padding: 0;
+    color: #fafbfd;
+    font-size: 16px;
+    line-height: 16.6875px;
+  }
+`;
+export const PostFooter = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #5b7083;
+  transition: all 100ms ease-in;
+  > .MuiSvgIcon-root:hover:nth-child(1) {
+    fill: #fafbfd;
+    cursor: pointer;
+  }
+  > .MuiSvgIcon-root:hover:nth-child(2) {
+    fill: #fafbfd;
+    cursor: pointer;
+  }
+  > .MuiSvgIcon-root:hover:nth-child(3) {
+    fill: #fafbfd;
+    cursor: pointer;
+  }
+  > .MuiSvgIcon-root:hover:nth-child(4) {
+    fill: #fafbfd;
+    cursor: pointer;
   }
 `;
