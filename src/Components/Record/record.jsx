@@ -10,19 +10,20 @@ import {
   LoginButton,
   Input,
   Form,
-} from "./LoginStyle";
+} from "../Login/LoginStyle";
 import XIcon from "@mui/icons-material/X";
 
-const Login = () => {
-  const { loginUser, errorMessage } = useContext(UserContext);
+const Register = () => {
+  const { registerUser, errorMessage } = useContext(UserContext);
   const navigate = useNavigate();
 
   const [formState, setFormState] = useState({
+    name: "",
     email: "",
     password: "",
   });
 
-  const { email, password } = formState;
+  const { name, email, password } = formState;
 
   const onInputChange = (event) => {
     const { name, value } = event.target;
@@ -32,10 +33,10 @@ const Login = () => {
     });
   };
 
-  const onLogin = async (event) => {
+  const onRegister = async (event) => {
     event.preventDefault();
-    const isValidLogin = loginUser(email, password);
-    if (isValidLogin) {
+    const isValidRegister = registerUser(name, email, password);
+    if (isValidRegister) {
       navigate("/main", { replace: true });
     }
   };
@@ -48,9 +49,20 @@ const Login = () => {
           <XIcon style={{ fontSize: "400px", color: "#e7e9ea" }} />
         </SidebarLeft>
         <MainContent>
-          <Title>Sign in to X</Title>
-          <form onSubmit={onLogin}>
+          <Title>Create your account</Title>
+          <form onSubmit={onRegister}>
             <Form>
+              <Input>
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={onInputChange}
+                  placeholder="Enter your name"
+                  required
+                />
+              </Input>
               <Input>
                 <label htmlFor="email">Email</label>
                 <input
@@ -73,20 +85,19 @@ const Login = () => {
                   required
                 />
               </Input>
-              <LoginButton type="submit">Login</LoginButton>
+              <LoginButton type="submit">Register</LoginButton>
             </Form>
             {errorMessage && (
               <p style={{ color: "red", marginTop: "10px" }}>{errorMessage}</p>
             )}
           </form>
-          <form>
-            <p style={{ marginTop: "20px" }}>
-              Don't have an account? <Link to="/register">Sign up</Link>
-            </p>
-          </form>
+          <p style={{ marginTop: "20px" }}>
+            Already have an account? <Link to="/login">Sign in</Link>
+          </p>
         </MainContent>
       </Container>
     </>
   );
 };
-export default Login;
+
+export default Register;
