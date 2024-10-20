@@ -1,6 +1,6 @@
-import { userTypes } from "../types/UserTypes";
+import { userTypes } from "../Types/userTypes";
 
-export const UserReducer = (state, action) => {
+export const UserReducer = (state = {}, action = {}) => {
   switch (action.type) {
     case userTypes.logIn:
       return {
@@ -13,14 +13,15 @@ export const UserReducer = (state, action) => {
     case userTypes.logOut:
       return {
         logged: false,
-        user: null,
+        user: {},
         errorMessage: null,
       };
 
     case userTypes.error:
       return {
         ...state,
-        errorMessage: action.payload,
+        loggef: false,
+        errorMessage: action.payload?.errorMessage,
       };
 
     default:
