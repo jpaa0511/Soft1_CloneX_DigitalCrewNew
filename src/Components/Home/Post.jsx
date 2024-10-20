@@ -13,32 +13,26 @@ import {
   PostFooter,
 } from "../Home/styles";
 
-export const Posts = () => {
+export const Posts = ({ name, username, text, avatar, imagenPost }) => {
   return (
     <Post>
       <div className="post-avatar">
-        <Avatar src="https://randomuser.me/api/portraits/women/17.jpg" />
+        <Avatar src={avatar} alt={`${name}'s avatar`} />
       </div>
       <PostBody>
         <div>
           <div>
             <h2>
-              Json dev{" "}
+              {name}
               <span>
-                <VerifiedUserIcon className="post_icon" />
-                @Emilio1
+                <VerifiedUserIcon className="post_icon" />@{username}
               </span>
             </h2>
             <PostDescription>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam,
-                quia cum atque molestias veritatis animi voluptates eum aut
-                delectus cumque dignissimos odit est numquam quas dolores
-                recusandae obcaecati beatae temporibus?
-              </p>
+              <p>{text}</p>
             </PostDescription>
           </div>
-          <Images src="https://randomuser.me/api/portraits/women/17.jpg" />
+          {imagenPost && <Images src={imagenPost} alt="Imagen del post" />}
           <PostFooter>
             <ChatBubbleOutlineIcon fontSize="small" />
             <RepeatIcon fontSize="small" />
@@ -47,7 +41,6 @@ export const Posts = () => {
           </PostFooter>
         </div>
       </PostBody>
-      <div>Post</div>
     </Post>
   );
 };

@@ -5,6 +5,7 @@ import { Widgets } from "./Components/Widgets";
 import GlobalStyles from "./styles/StylesGlobal";
 import { UserContext } from "./auth/Contexts/UserContext";
 import { useNavigate } from "react-router-dom";
+import { AppContainer, LogoutButton } from "./MainPageStyles";
 
 const MainPage = () => {
   const { logoutUser } = useContext(UserContext);
@@ -18,12 +19,12 @@ const MainPage = () => {
   return (
     <>
       <GlobalStyles />
-      <div className="App">
+      <AppContainer className="App">
         <Sidebar />
         <Home />
         <Widgets />
-        <button onClick={handleLogout}>Log out</button>
-      </div>
+        <LogoutButton onClick={handleLogout}>Log out</LogoutButton>
+      </AppContainer>
     </>
   );
 };

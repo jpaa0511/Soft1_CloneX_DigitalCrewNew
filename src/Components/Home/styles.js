@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  flex: 0.5;
+  flex: 0.6;
   max-width: 600px;
   border-right: 1px solid #e6ecf0;
   overflow-y: scroll;

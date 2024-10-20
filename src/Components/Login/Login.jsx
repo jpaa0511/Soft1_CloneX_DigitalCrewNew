@@ -79,11 +79,11 @@ const Login = () => {
               <p style={{ color: "red", marginTop: "10px" }}>{errorMessage}</p>
             )}
           </form>
-          <from>
+          <form>
             <p style={{ marginTop: "20px" }}>
               Don't have an account? <Link to="/register">Sign up</Link>
             </p>
-          </from>
+          </form>
         </MainContent>
       </Container>
     </>
