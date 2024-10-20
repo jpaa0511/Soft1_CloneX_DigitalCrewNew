@@ -8,11 +8,11 @@ import { useNavigate } from "react-router-dom";
 import { AppContainer, LogoutButton } from "./MainPageStyles";
 
 const MainPage = () => {
-  const { logoutUser } = useContext(UserContext);
+  const { logOutUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    logoutUser();
+    logOutUser();
     navigate("/login", { replace: true });
   };
 
