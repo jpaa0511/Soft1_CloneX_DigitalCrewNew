@@ -1,5 +1,10 @@
 import { userTypes } from "../Types/userTypes";
-import { authUser, registerUser, authWithGoogle, AuthWithFacebook } from "../../Connecting_to_Firebase/authProviders";
+import {
+  authUser,
+  registerUser,
+  authWithGoogle,
+  AuthWithFacebook,
+} from "../../auth/Contexts/authProviders";
 
 export const useAuth = (dispatch) => {
   const logInUser = async (email, password) => {
@@ -33,7 +38,7 @@ export const useAuth = (dispatch) => {
     dispatch(action);
   };
 
-  const   signUpUser = async (email, password, displayName) => {
+  const signUpUser = async (email, password, displayName) => {
     const { ok, uid, photoURL, errorMessage } = await registerUser(
       email,
       password,
@@ -115,7 +120,11 @@ export const useAuth = (dispatch) => {
     return true;
   };
 
-  return { logInUser, logOutUser, signUpUser, logInWithGoogle, logInWithFacebook };
+  return {
+    logInUser,
+    logOutUser,
+    signUpUser,
+    logInWithGoogle,
+    logInWithFacebook,
+  };
 };
-
-

@@ -1,4 +1,4 @@
-import { FireBaseAuth } from "./config";
+import { FireBaseAuth } from "../../Connecting_to_Firebase/firebase";
 import {
   signInWithEmailAndPassword,
   GoogleAuthProvider,
@@ -40,7 +40,7 @@ export const authUser = async (email, password) => {
 
 export const registerUser = async (email, password, displayName) => {
   try {
-    const result = await createUserWithEmailAndPassword (
+    const result = await createUserWithEmailAndPassword(
       FireBaseAuth,
       email,
       password
@@ -87,7 +87,7 @@ export const authWithGoogle = async () => {
       ok: false,
       errorMessage: error.message,
     };
-  };
+  }
 };
 
 const FacebooProvider = new FacebookAuthProvider();
@@ -112,5 +112,5 @@ export const AuthWithFacebook = async () => {
       ok: false,
       errorMessage: error.message,
     };
-  };
+  }
 };
