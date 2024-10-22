@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Login from "../Components/Login/Login";
-import MainPage from "../MainPage";
+import Login from "../pages/Login/Login";
+import MainPage from "../pages/Home/MainPage";
 import { PrivateRoute } from "./PrivateRoute";
 
 const AppRouter = () => {
