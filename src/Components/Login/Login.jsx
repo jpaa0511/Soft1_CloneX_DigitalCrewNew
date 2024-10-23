@@ -23,8 +23,13 @@ import { RegisterModal } from "../Modal/RegisterModal";
 import { LoginModal } from "../Modal/ModalLogin";
 
 const Login = () => {
-  const { logInUser, signUpUser, logInWithGoogle, logInWithFacebook, errorMessage } =
-    useContext(UserContext);
+  const {
+    logInUser,
+    signUpUser,
+    logInWithGoogle,
+    logInWithFacebook,
+    errorMessage,
+  } = useContext(UserContext);
   const navigate = useNavigate();
 
   const [formState, setFormState] = useState({
@@ -118,7 +123,7 @@ const Login = () => {
             Ingresar con Facebook
           </FacebookButton>
           <br />
-          <p>--------------------------- o --------------------------</p>
+          <p>______________ o _________________</p>
           <br />
           <LoginButton onClick={openModalLogin}>Login</LoginButton>
           <br />
@@ -128,41 +133,41 @@ const Login = () => {
           {isOpenModalLogin && (
             <LoginModal>
               <HeaderModal>
-              <TitleRegister>INICIAR SESION</TitleRegister>
-              <CloseButton onClick={openModalLogin}>X</CloseButton>
-            </HeaderModal>
-            <form onSubmit={onLogin}>
-              <Form>
-                <Input>
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={email}
-                    onChange={onInputChangeLogin}
-                    placeholder="Enter your email"
-                    required
-                  />
-                </Input>
-                <Input>
-                  <label htmlFor="password">Password</label>
-                  <input
-                    type="password"
-                    name="password"
-                    value={password}
-                    onChange={onInputChangeLogin}
-                    placeholder="Enter your password"
-                    required
-                  />
-                </Input>
-                <LoginButton type="submit">Login</LoginButton>
-              </Form>
-              {errorMessage && (
-                <p style={{ color: "red", marginTop: "10px" }}>
-                  {errorMessage}
-                </p>
-              )}
-            </form>
+                <TitleRegister>INICIAR SESION</TitleRegister>
+                <CloseButton onClick={openModalLogin}>X</CloseButton>
+              </HeaderModal>
+              <form onSubmit={onLogin}>
+                <Form>
+                  <Input>
+                    <label htmlFor="email">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={email}
+                      onChange={onInputChangeLogin}
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </Input>
+                  <Input>
+                    <label htmlFor="password">Password</label>
+                    <input
+                      type="password"
+                      name="password"
+                      value={password}
+                      onChange={onInputChangeLogin}
+                      placeholder="Enter your password"
+                      required
+                    />
+                  </Input>
+                  <LoginButton type="submit">Login</LoginButton>
+                </Form>
+                {errorMessage && (
+                  <p style={{ color: "red", marginTop: "10px" }}>
+                    {errorMessage}
+                  </p>
+                )}
+              </form>
             </LoginModal>
           )}
         </MainContent>
