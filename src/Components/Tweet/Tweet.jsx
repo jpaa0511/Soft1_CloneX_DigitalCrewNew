@@ -70,7 +70,7 @@ export const Tweet = (username) => {
           <Avatar src={post.avatar || user?.photoURL} alt="User Avatar" />
           <TweetContent>
             <UserInfo>
-              <strong>{post.name || user?.displayName}</strong>{" "}
+              <strong>{user?.displayName}</strong>{" "}
               <span>@{post.username}</span>
               {post.verified && <VerifiedUserIcon className="post_icon" />}
             </UserInfo>

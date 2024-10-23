@@ -36,7 +36,6 @@ export const TwitterBoxs = () => {
     }
     try {
       await addDoc(collection(db, "posts"), {
-        name: user,
         username: user,
         veridield: true,
         text: tweeMsg,
