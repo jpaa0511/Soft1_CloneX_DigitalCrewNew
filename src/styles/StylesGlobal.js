@@ -9,17 +9,16 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    min-width: 320px;
     min-height: 100vh;
     background-color: #000000; 
+    overflow-x: hidden; /* Evitar cualquier desbordamiento horizontal */
   }
 
   :root {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    margin: -8px;
-
+    
     color-scheme: light dark;
     color: #ffffff; 
     font-synthesis: none;
@@ -34,8 +33,7 @@ export default createGlobalStyle`
   .App {
     display: flex;
     height: 100vh;
-    max-width: 1250px;
-    margin: 0 auto;
-    border: none; 
+    width: 100vw; /* Asegura que ocupe todo el ancho */
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
   }
 `;

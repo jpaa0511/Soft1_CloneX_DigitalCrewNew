@@ -25,37 +25,6 @@ export const UserProvider = ({ children }) => {
 
   const { logInUser, logOutUser, signUpUser, logInWithGoogle, logInWithFacebook } = useAuth(dispatch); 
 
-  // const loginUser = (email = "", password = "") => {
-  //   const validEmail = "usuario@example.com";
-  //   const validPassword = "123456";
-
-  //   if (email === validEmail && password === validPassword) {
-  //     const userData = {
-  //       uid: new Date().getTime(),
-  //       name: "Example User",
-  //       email,
-  //     };
-
-  //     localStorage.setItem("user", JSON.stringify(userData));
-  //     dispatch({
-  //       type: userTypes.logIn,
-  //       payload: userData,
-  //     });
-
-  //     return true;
-  //   } else {
-  //     dispatch({
-  //       type: userTypes.error,
-  //       payload: "Incorrect credentials",
-  //     });
-  //     return false;
-  //   }
-  // };
-
-  // const logoutUser = () => {
-  //   localStorage.removeItem("user");
-  //   dispatch({ type: userTypes.logOut });
-  // };
   
   return (
     <UserContext.Provider

@@ -1,19 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  flex: 0.5;
-  max-width: 600px;
-  border-right: 1px solid #e6ecf0;
-  overflow-y: scroll;
-  box-sizing: border-box;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-`;
 
 export const Header = styled.header`
   position: sticky;
@@ -51,9 +38,8 @@ export const Div = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-right: 16px;
+    
     > input {
-      margin-left: 10px;
       margin-top: 10px;
       width: 100%;
       border: none;
@@ -78,7 +64,7 @@ export const Div = styled.div`
     boder: none !important;
     color: white !important;
     font-weight: 600 !important;
-    width: 80px !important;
+   
     height: 32px !important;
     margin-top: 20px !important;
     border-radius: 30px !important;
@@ -120,4 +106,31 @@ export const Button = styled.button`
   &:hover {
     background-color: #1a91da;
   }
+`;
+
+
+
+export const Container = styled.main`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2; /* El timeline ocupa más espacio */
+  padding: 20px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 740px; /* Para limitar el ancho máximo del timeline */
+`;
+
+export const SidebarContainer = styled.aside`
+  flex-basis: 270px; /* Ancho fijo para el sidebar */
+  padding: 10px;
+  
+`;
+
+export const WidgetsContainer = styled.aside`
+  flex-basis: 300px; /* Ancho fijo para los widgets */
+  padding: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;

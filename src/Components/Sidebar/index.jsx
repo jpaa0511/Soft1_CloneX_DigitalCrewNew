@@ -1,6 +1,13 @@
-import React from "react";
-import { Container } from "./styles";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import React, { useContext, useState } from "react";
+import {
+  Container,
+  UserContainer,
+  Avatar,
+  TooltipContainer,
+  TooltipItem,
+  Button,
+} from "./styles";
+import XIcon from "@mui/icons-material/X";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
@@ -10,24 +17,49 @@ import PeopleIcon from "@mui/icons-material/People";
 import PersonIcon from "@mui/icons-material/Person";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { IconsOptions } from "./IconsOptions";
-import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../auth/Contexts/UserContext";
 
 export const Sidebar = () => {
+  const [showTooltip, setShowTooltip] = useState(false);
+  const { user, logOutUser } = useContext(UserContext);
+  const navigate = useNavigate();
+  console.log(user.photoURL);
+  const handleLogout = () => {
+    logOutUser();
+    navigate("/login", { replace: true });
+  };
+
+  const toggleTooltip = () => {
+    setShowTooltip((prev) => !prev);
+  };
+
   return (
     <Container>
-      <TwitterIcon className="LogoTitter" />
+      <XIcon className="LogoTitter" />
       <IconsOptions Icon={HomeIcon} text="Home" />
-      <IconsOptions Icon={SearchIcon} text="Search" />
+      <IconsOptions Icon={SearchIcon} text="Explore" />
       <IconsOptions Icon={NotificationsActiveIcon} text="Notifications" />
-      <IconsOptions Icon={EmailIcon} text="Email" />
+      <IconsOptions Icon={EmailIcon} text="Messages" />
       <IconsOptions Icon={BookmarksIcon} text="Bookmarks" />
       <IconsOptions Icon={PeopleIcon} text="Communities" />
       <IconsOptions Icon={PersonIcon} text="Profile" />
       <IconsOptions Icon={MoreHorizIcon} text="More" />
 
-      <Button variant="outlined" fullWidth>
-        Twitter
-      </Button>
+      <Button>Post</Button>
+
+      <UserContainer onClick={toggleTooltip}>
+        <Avatar src={user?.photoURL} alt="User Avatar" />
+        <div>
+          <h4>{user?.displayName}</h4>
+          <span>{user?.email}</span>
+        </div>
+        {showTooltip && (
+          <TooltipContainer>
+            <TooltipItem onClick={handleLogout}>Logout</TooltipItem>
+          </TooltipContainer>
+        )}
+      </UserContainer>
     </Container>
   );
 };

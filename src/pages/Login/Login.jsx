@@ -19,8 +19,8 @@ import {
   FacebookButton,
 } from "./LoginStyle";
 import XIcon from "@mui/icons-material/X";
-import { RegisterModal } from "../Modal/RegisterModal";
-import { LoginModal } from "../Modal/ModalLogin";
+import { RegisterModal } from "../../Components/Modal/RegisterModal";
+import { LoginModal } from "../../Components/Modal/ModalLogin";
 
 const Login = () => {
   const { logInUser, signUpUser, logInWithGoogle, logInWithFacebook, errorMessage } =
