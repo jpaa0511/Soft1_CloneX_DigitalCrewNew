@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const Header = styled.header`
   position: sticky;
   top: 0;
@@ -18,8 +16,7 @@ export const Header = styled.header`
   }
 `;
 
-/*BoxTwitter */
-export const Boxtwitter = styled.div`
+export const TweeterBox = styled.div`
   padding: 5px 15px;
   border-bottom: 1px solid #ddd;
 `;

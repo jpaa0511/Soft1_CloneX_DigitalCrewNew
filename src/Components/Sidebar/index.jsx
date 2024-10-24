@@ -24,7 +24,7 @@ export const Sidebar = () => {
   const [showTooltip, setShowTooltip] = useState(false);
   const { user, logOutUser } = useContext(UserContext);
   const navigate = useNavigate();
-  console.log(user.photoURL);
+  
   const handleLogout = () => {
     logOutUser();
     navigate("/login", { replace: true });

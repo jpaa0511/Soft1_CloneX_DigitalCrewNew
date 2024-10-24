@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// Contenedor principal del widget
 export const WidgetContainer = styled.div`
   padding: 20px;
   background-color: #000; /* Fondo oscuro para widget */
@@ -10,7 +9,6 @@ export const WidgetContainer = styled.div`
   margin-bottom: 20px; /* Espacio inferior para separar widgets */
 `;
 
-// Barra de búsqueda
 export const SearchBar = styled.div`
   padding: 10px 15px;
   background-color: #202327; /* Fondo oscuro para la barra de búsqueda */
@@ -20,7 +18,6 @@ export const SearchBar = styled.div`
   align-items: center;
 `;
 
-// Contenedor del ícono y el input
 export const InputContainer = styled.div`
   display: flex;
   align-items: center;
@@ -45,7 +42,6 @@ export const InputContainer = styled.div`
   }
 `;
 
-// Sección de contenido
 export const ContentSection = styled.div`
   h2 {
     font-size: 20px;
@@ -54,14 +50,12 @@ export const ContentSection = styled.div`
   }
 `;
 
-// Lista de tendencias
 export const TrendsList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
 `;
 
-// Estilo para cada tendencia
 export const TrendItem = styled.div`
   display: flex;
   flex-direction: column;

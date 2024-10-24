@@ -19,8 +19,8 @@ import {
   FacebookButton,
 } from "./LoginStyle";
 import XIcon from "@mui/icons-material/X";
-import { RegisterModal } from "../../Components/Modal/RegisterModal";
-import { LoginModal } from "../../Components/Modal/ModalLogin";
+import { RegisterModal } from "../Modal/RegisterModal";
+import { LoginModal } from "../Modal/ModalLogin";
 
 const Login = () => {
   const {
@@ -123,7 +123,7 @@ const Login = () => {
             Ingresar con Facebook
           </FacebookButton>
           <br />
-          <p>--------------------------- o --------------------------</p>
+          <p>______________ o _________________</p>
           <br />
           <LoginButton onClick={openModalLogin}>Login</LoginButton>
           <br />

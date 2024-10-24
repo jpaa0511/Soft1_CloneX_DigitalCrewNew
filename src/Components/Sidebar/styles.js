@@ -90,7 +90,7 @@ export const TooltipContainer = styled.div`
   position: absolute;
   bottom: 60px;
   left: 0;
-  background-color: #192734;
+  background-color: #000;
   border: 1px solid #2f3336;
   border-radius: 10px;
   padding: 10px;
