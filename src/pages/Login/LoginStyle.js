@@ -151,7 +151,6 @@ export const InputRegister = styled.div`
 
   label {
     display: block;
-    margin-bottom: 5px;
     font-weight: bold;
   }
 
@@ -171,11 +170,10 @@ export const InputRegister = styled.div`
 `;
 
 export const HeaderModal = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 `;
 
 export const TitleRegister = styled.h1`
@@ -204,7 +202,7 @@ export const GoogleButton = styled.button`
     width: 20px;
     height: 20px;
     margin-right: 30px;
-    
+  }
 `;
 
 export const FacebookButton = styled.button`
@@ -227,5 +225,5 @@ export const FacebookButton = styled.button`
     width: 20px;
     height: 20px;
     margin-right: 30px;
-    
+  }
 `;

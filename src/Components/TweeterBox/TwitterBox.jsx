@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Boxtwitter, Avatar, Div, Form, DivIcon, File, DivURL } from "./styles";
+import { TwitterBox, Avatar, Div, Form, DivIcon, File, DivURL } from "./styles";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
 import GifIcon from "@mui/icons-material/Gif";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
@@ -10,7 +10,7 @@ import { db } from "../../Connecting_to_Firebase/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import User from "../../Components/Img/user1.png";
 
-export const BoxTwitter = () => {
+export const TwitterBoxs = () => {
   confirm;
   const [user, setUser] = useState("");
   const [tweeMsg, setTweeMsg] = useState("");
@@ -30,16 +30,12 @@ export const BoxTwitter = () => {
     if (user.length < 1) {
       alert("Debe escribir un nombre de usuario.");
     }
-    if (avatar.length < 1) {
-      alert("Debe escribir una foto de usuario.");
-    }
     if (tweeMsg.length < 5 || tweeMsg.length > 300) {
       alert("El tweet debe tener entre 5 y 300 caracteres.");
       return;
     }
     try {
       await addDoc(collection(db, "posts"), {
-        name: user,
         username: user,
         veridield: true,
         text: tweeMsg,
@@ -85,10 +81,11 @@ export const BoxTwitter = () => {
         setIsLoading(false);
       }
     }
+    localStorage.removeItem("userAvatar");
   };
 
   return (
-    <Boxtwitter>
+    <TwitterBox>
       <Form>
         <Div>
           {isLoading ? (
@@ -140,10 +137,10 @@ export const BoxTwitter = () => {
             onChange={(e) => setPost(e.target.value)}
           />
           <Button onClick={sendTweet} type="submit">
-            Tweet
+            Post
           </Button>
         </DivURL>
       </Div>
-    </Boxtwitter>
+    </TwitterBox>
   );
 };
